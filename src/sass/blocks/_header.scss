@@ -1,0 +1,14 @@
+.header {
+    width: 320px;
+    height: 88px;
+    background-color: $bg-color-light;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__divider {
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background-color: #EAEAEA; 
+    }
+}
