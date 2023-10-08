@@ -1,0 +1,17 @@
+.main {
+    width: 320px;
+    min-height: 510px;
+    padding: 24px 0 8px;
+    background-color: $bg-color-grey;
+}
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    &::before {
+        content: url("../icons/side-line-icon.svg");
+        width: 4px;
+        height: 40px;
+    }
+}
