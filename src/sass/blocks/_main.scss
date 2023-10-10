@@ -1,37 +1,25 @@
 .main {
-    min-height: 510px;
-    padding: 24px 0 8px;
+    padding: 0 0 8px;
     background-color: $bg-color-grey;
-}
-.title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-    &::before {
-        content: url("../icons/side-line-icon.svg");
-        width: 4px;
-        height: 40px;
-    }
 }
 .horiz-menu {
     display: flex;
     justify-content: space-between;
     gap: 19px;
-    margin: 0 16px 24px;
+    margin: 0 16px 16px;
     overflow-x: scroll;
     &__link {
         display: inline-block;
         padding: 8px 12px;
+        margin-bottom: 8px;
         white-space: nowrap;
         text-decoration: none;
         border: 2px solid $bg-color-grey;
         border-radius: 6px;
         &:focus {
-            border: 2px solid #B8FFEC;
+            border: 2px solid $decor-color-border;
             border-radius: 6px;
-            background: #FFF;
+            background: $bg-color-light;
             outline: none;
             transition: all 0.2s linear;
         }
@@ -49,24 +37,40 @@
     &__text {
         padding: 0 16px 16px;
     }
-    &__visible-768 {
-        display: none;
-    }
-    &__visible-1120 {
-        display: none;
+    &__img {
+        width: 100%;
+        object-fit: contain;
+        object-position: center top;
     }
 }
 .read-more {
-    display: flex;
+    display: inline-flex;
     justify-content: start;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
     &__arrows::before {
-        content: url("../icons/arrows-to-bottom-icon.svg");
+        content: "";
+        display: block;
         width: 24px;
         height: 24px;
+        background: url("../icons/arrows-to-bottom-icon.svg") center center / contain no-repeat;
     }
-    &__link {
-        text-decoration: none;
+    &:focus {
+        outline: 2px solid $decor-color-border;
+        outline-offset: 5px;
+    }
+    &:hover {
+        .read-more__text {
+            color: $link-color-hover;
+            transition: color 0.2s linear;
+        }
+    }
+    &:active {
+        .read-more__text {
+            color: $link-color-active;
+            text-decoration: underline;
+            transition: all 0.2s linear;
+        }
     }
 }
