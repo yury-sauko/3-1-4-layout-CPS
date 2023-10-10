@@ -1,6 +1,15 @@
 .main {
+    position: relative;
     padding: 0 0 8px;
     background-color: $bg-color-grey;
+}
+.gradient-4-horiz-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(270deg, #F8F8F8 25%, rgba(248, 248, 248, 0.00) 100%);
 }
 .horiz-menu {
     display: flex;
