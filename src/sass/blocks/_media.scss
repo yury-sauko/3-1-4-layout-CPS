@@ -1,5 +1,57 @@
 @media (min-width:  768px) {
-
+    .header {
+        .visible--above768 {
+            display: inline-block;
+        }
+        &__icons-wrapper {
+            justify-content: flex-end;
+        }
+        &__link {
+            &--ml24-mr20 {
+                margin-left: 24px;
+                margin-right: 20px;
+            }
+            &--mr16 {
+                margin-right: 16px;
+            }
+            &--mr20 {
+                margin-right: 20px;
+            }
+            &--mr24 {
+                margin-right: 24px;
+            }
+            &--mr-auto {
+                margin-right: auto;
+            }
+        }
+        &__divider--mr20 {
+            margin-right: 20px;
+        }
+    }
+    .title {
+        gap: 20px;
+    }
+    .main {
+        padding: 0 0 40px;
+    }
+    .horiz-menu {
+        margin: 0 16px 24px 24px;
+    }
+    .company-descr {
+        display: flex;
+        gap: 48px;
+        padding: 0 24px;
+        &__text {
+            padding: 0;
+            flex-basis: 45%;
+        }
+        &__img-container {
+            flex-basis: 55%;
+        }
+        .visible--above768 {
+            display: inline;
+        }
+    }
 }
 
 @media (min-width:  1120px) {
