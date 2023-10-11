@@ -5,7 +5,7 @@
     &__icons-wrapper {
         height: 88px;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
     }
     &__divider {
@@ -29,6 +29,13 @@
         width: 97px;
         height: 51px;
         object-fit: contain;
+    }
+    &__burger.margin--var {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    &__repair.margin--var, &__check-status.margin--var {
+        margin-right: 16px;
     }
 }
 .title {

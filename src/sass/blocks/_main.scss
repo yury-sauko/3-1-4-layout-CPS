@@ -13,8 +13,8 @@
 }
 .horiz-menu {
     display: flex;
-    justify-content: space-between;
-    gap: 19px;
+    justify-content: flex-start;
+    gap: 16px;
     margin: 0 16px 16px;
     overflow-x: scroll;
     &__link {

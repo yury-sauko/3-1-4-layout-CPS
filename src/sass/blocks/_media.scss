@@ -3,29 +3,11 @@
         .visible--above768 {
             display: inline-block;
         }
-        &__icons-wrapper {
-            justify-content: flex-end;
+        &__repair.margin--var {
+            margin-right: 16px;
         }
-        &__link {
-            &--ml24-mr20 {
-                margin-left: 24px;
-                margin-right: 20px;
-            }
-            &--mr16 {
-                margin-right: 16px;
-            }
-            &--mr20 {
-                margin-right: 20px;
-            }
-            &--mr24 {
-                margin-right: 24px;
-            }
-            &--mr-auto {
-                margin-right: auto;
-            }
-        }
-        &__divider--mr20 {
-            margin-right: 20px;
+        &__check-status.margin--var {
+            margin-right: 24px;
         }
     }
     .title {
@@ -48,6 +30,9 @@
         &__img-container {
             flex-basis: 55%;
         }
+        &__img {
+            border-radius: 7px;
+        }
         .visible--above768 {
             display: inline;
         }
@@ -55,5 +40,52 @@
 }
 
 @media (min-width:  1120px) {
-
+    .header {
+        background-color: $bg-color-grey;
+        padding: 42px 0 9px;
+        flex-direction: row;
+        justify-content: space-between;
+        &__icons-wrapper {
+            order: 1;
+            height: auto;
+        }
+        &__burger, &__divider, &__logo, .visible--above768 {
+            display: none;
+        }
+        .visible--above1120 {
+            display: inline-block;
+        }
+        &__repair.margin--var, &__check-status.margin--var {
+            margin-right: 32px;
+        }
+    }
+    .title {
+        height: auto;
+    }
+    .gradient-4-horiz-menu {
+        display: none;
+    }
+    .horiz-menu {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 7px;
+        margin: 0 16px 12px 32px;
+        &__link {
+            margin-bottom: 0;
+        }
+    }
+    .company-descr {
+        gap: 36px;
+        padding: 0 32px;
+        &__text {
+            flex-basis: 48%;
+        }
+        &__img-container {
+            flex-basis: 52%;
+        }
+        .visible--above1120 {
+            display: inline;
+        }
+    }
 }
