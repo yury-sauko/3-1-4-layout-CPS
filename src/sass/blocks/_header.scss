@@ -19,6 +19,19 @@
             outline: 2px solid $decor-color-border;
             outline-offset: 5px;
         }
+        &:hover {
+            .header__link-text {
+                color: $link-color-hover;
+                transition: color 0.2s linear;
+            }
+        }
+        &:active {
+            .header__link-text {
+                color: $link-color-active;
+                text-decoration: underline;
+                transition: all 0.2s linear;
+            }
+        }
         &-img {
             width: 40px;
             height: 40px;

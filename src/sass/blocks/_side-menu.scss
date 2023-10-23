@@ -4,6 +4,7 @@
     left: 0;
     width: 320px;
     height: 100%;
+    overflow: auto;
     padding: 18px 24px 32px;
     background-color: $bg-color-light;
     box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
@@ -20,12 +21,36 @@
         margin-right: 16px;
         cursor: pointer;
     }
+    &__close-img, &__search-img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
     &__logo {
         margin-right: auto;
+        &-img {
+            width: 97px;
+            height: 51px;
+            object-fit: contain;
+        }
     }
     &__btn {
         border: none;
         background-color: $bg-color-light;
+    }
+    &__link-img {
+        &:focus {
+            outline: 2px solid $decor-color-border;
+            outline-offset: 5px;
+        }
+        &:hover {
+            filter: opacity(70%);
+            transition: filter 0.2s linear;
+        }
+        &:active {
+            filter: opacity(40%);
+            transition: filter 0.2s linear;
+        }
     }
     &__nav {
         margin: 0 0 auto;
@@ -35,9 +60,6 @@
     &__item {
         position: relative;
         margin-bottom: 32px;
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &__before-item-line {
         &::before {
@@ -51,10 +73,44 @@
         }
     }
     &__link {
-        letter-spacing: -0.2px;
         text-decoration: none;
+        &:focus {
+            outline: 2px solid $decor-color-border;
+            outline-offset: 5px;
+        }
+        &:hover {
+            color: $link-color-hover;
+            transition: color 0.2s linear;
+        }
+        &:active {
+            color: $link-color-active;
+            text-decoration: underline;
+            outline: none;
+            transition: all 0.2s linear;
+        }
     }
-    // &__footer {
-        
-    // }
+    &__footer {
+        &-icon {
+            margin: 0 16px 16px 0;
+            &-img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
+        &-email {
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        &-phone {
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+    }
+    &__lang {
+        margin-right: 7px;
+        &--active {
+            color: $text-color-grey;
+        }
+    }
 }
